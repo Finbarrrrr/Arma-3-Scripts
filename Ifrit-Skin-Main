@@ -1,0 +1,88 @@
+_blacklisted = [];
+while {true} do {
+	sleep 1;
+	_veh = vehicle player;
+
+	if (typeOf vehicle player == "O_MRAP_02_F" and (driver (vehicle player)) isEqualTo player) then
+	{
+		switch (true) do
+		{
+			case (IfritSkin):
+			{
+				_veh setObjectTextureGlobal [1,"textures\BlackIfritBack.jpeg"];
+				_veh setObjectMaterialGlobal [0, "textures\pinkchrom.rvmat"];
+				_veh setObjectTextureGlobal [0,"textures\ChromepinkFront.jpeg"];
+			};
+			case (PornhubSkin):
+			{
+				_veh setObjectTextureGlobal [0,"textures\PornhubFront.jpeg"];
+				_veh setObjectTextureGlobal [1,"textures\PornhubBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (CoronaSkin):
+			{
+				_veh setObjectTextureGlobal [0,"textures\coronaifritfront.jpeg"];
+				_veh setObjectTextureGlobal [1,"textures\coronaifritback.jpeg"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (LV):
+			{
+				_veh setObjectTextureGlobal [0,"textures\IfritfrontLV.jpeg"];
+				_veh setObjectTextureGlobal [1,"textures\IfritbackLV.jpeg"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (Beast):
+			{
+				_veh setObjectTextureGlobal [0,"textures\IfritBeastFront.jpeg"];
+				_veh setObjectTextureGlobal [1,"textures\IfritBeastBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (_uid in _blacklisted):
+			{
+				_veh setObjectTextureGlobal [0, "textures\Blacklistedfront.jpeg"];
+				_veh setObjectTextureGlobal [1, "textures\Blacklistedback.jpeg"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (NoSkin):
+			{
+				_veh setObjectTextureGlobal [0, "textures\IfritBlueCamoFrontDarker.paa"];
+				_veh setObjectTextureGlobal [1, "textures\IfritBlueCamoBackDarker.paa"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+			case (BlueGlow):
+			{
+				_veh setObjectTextureGlobal [1, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectTextureGlobal [0, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"textures\glow_blue.rvmat"];
+			};
+			case (RedGlow):
+			{
+				_veh setObjectTextureGlobal [1, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectTextureGlobal [0, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"textures\glow_red.rvmat"];
+			};
+			case (GreenGlow):
+			{
+				_veh setObjectTextureGlobal [1, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectTextureGlobal [0, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"textures\glow_emerald.rvmat"];
+			};
+			case (GoldGlow):
+			{
+				_veh setObjectTextureGlobal [1, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectTextureGlobal [0, "textures\BlackIfritBack.jpeg"];
+				_veh setObjectMaterialGlobal [0,"textures\gold.rvmat"];
+			};
+			default
+			{
+				_veh setObjectTextureGlobal [0, "textures\IfritBlueCamoFrontDarker.paa"];
+				_veh setObjectTextureGlobal [1, "textures\IfritBlueCamoBackDarker.paa"];
+				_veh setObjectMaterialGlobal [0,"a3\data_f\default_super.rvmat"];
+			};
+		};
+	};
+};
+
+
+
+
