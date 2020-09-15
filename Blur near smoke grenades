@@ -1,0 +1,20 @@
+onEachFrame {
+	_smokeShell = nearestObject [getPosATL player, "Smokeshell"];
+	_distance = _smokeShell distance player;
+	if (_smokeShell distance player < 5) then {
+				_valueblur = ((1 - (_distance*2)) + 10); 
+				_hndl = ppEffectCreate ["dynamicBlur", 505];
+				_hndl ppEffectEnable true;
+				_hndl ppEffectAdjust [_valueblur];
+				_hndl ppEffectCommit 0;
+	};
+	if (_smokeShell distance player > 5) then {
+				_hndl = ppEffectCreate ["dynamicBlur", 505];
+				_hndl ppEffectEnable true;
+				_hndl ppEffectAdjust [0];
+				_hndl ppEffectCommit 0;
+
+	
+	};
+};
+
