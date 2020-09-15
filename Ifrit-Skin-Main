@@ -1,3 +1,5 @@
+//This is the main script in how I applied skins to my ifrits, it links to a scroll wheel menu applied to the ammo crates where players would choose weapons
+
 _blacklisted = [];
 while {true} do {
 	sleep 1;
