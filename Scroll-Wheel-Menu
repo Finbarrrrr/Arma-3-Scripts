@@ -1,0 +1,12 @@
+fnc_Skin =
+{
+	getSkin;
+};
+
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_Green"], "donatoractions\green_glow.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_Blue"], "donatoractions\blue_glow.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_Red"], "donatoractions\red_glow.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_Gold"], "donatoractions\gold_glow.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_ButchRed"], "donatoractions\butchred.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_ButchPur"], "donatoractions\butchpurple.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
+_veh addAction [format ["<t color='#CA2E2E'>%1</t>", localize "STR_ButchGre"], "donatoractions\butchgreen.sqf", [], 0, false, false, "", "([] call fnc_Skin) && !roundInProgress"];
