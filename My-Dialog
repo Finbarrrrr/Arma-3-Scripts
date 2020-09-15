@@ -1,0 +1,51 @@
+//This is the first dialog I made, I have limited experience with these so it is a very simple and admittedly not very pretty design
+class myDialog
+{
+	idd = -1;
+	movingEnable = false;
+	moving = 1;
+	onLoad = "";
+	onUnload = "";
+	controls[] = {discordButton,continueButton,textBox};
+	controlsBackground[] = {background};
+
+	class background: RscFrame
+	{
+		idc = 1800;
+		x = (safeZoneX + (safeZoneW / 2)) - ((safeZoneW / 2) / 2);
+		y = (safeZoneY + (safeZoneH / 2)) - ((safeZoneH / 3) / 2);
+		w = safeZoneW / 2;
+		h = safeZoneH / 3;
+	};
+	class textBox: RscText
+	{
+		idc = 1000;
+		text = "Welcome to Finbar Attack and Defend"; //--- ToDo: Localize;
+		x = (safeZoneX + (safeZoneW / 2)) - ((safeZoneW / 6) / 2);
+		y = (safeZoneY + (safeZoneH / 2.1)) - ((safeZoneH / 6) / 2);
+		w = safeZoneW / 5;
+		h = safeZoneH / 6;
+	};
+	class discordButton: RscButton
+	{
+		idc = 1600;
+		text = "Check out our Discord!"; //--- ToDo: Localize;
+		url = "https://discord.gg/hDJUFtP";
+		x = (safeZoneX + (safeZoneW * 0.375)) - ((safeZoneW / 8) / 2);
+		y = (safeZoneY + (safeZoneH / 1.9)) - ((safeZoneH / 25) / 2);
+		w = safeZoneW / 8;
+		h = safeZoneH / 25;
+	};
+	class continueButton: RscButton
+	{
+		idc = 1601;
+		text = "Continue"; //--- ToDo: Localize;
+		x = (safeZoneX + (safeZoneW * 0.625)) - ((safeZoneW / 8) / 2);
+		y = (safeZoneY + (safeZoneH / 1.9)) - ((safeZoneH / 25) / 2);
+		w = safeZoneW / 8;
+		h = safeZoneH / 25;
+		action = "closeDialog 2";
+	};
+};
+
+
